@@ -73,16 +73,6 @@ jobs:
             location: 'west europe' 
  
             ports: '3000' 
- 
-Als de deployment geslaagd is staat er 
-een vinkje voor. 
- 
-Door op de action te klikken kun je de 
-logs van de deployment bekijken. 
-  
- 
-Hier kun je de url vinden. 
-  
   
           with: 
  
