@@ -1,5 +1,5 @@
 on: [push] 
-  
+ 
  
   
 name: GettingStarted_Container_Workflow 
@@ -74,22 +74,3 @@ jobs:
  
             ports: '3000' 
   
-          with: 
- 
-            resource-group: ${{ secrets.RESOURCE_GROUP }} 
- 
-            dns-name-label: ${{ secrets.RESOURCE_GROUP }} 
- 
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
- 
-            registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} 
- 
-            registry-username: ${{ secrets.REGISTRY_USERNAME }} 
- 
-            registry-password: ${{ secrets.REGISTRY_PASSWORD }} 
- 
-            name: getting-started-github 
- 
-            location: 'west europe' 
- 
-            ports: '3000' 
