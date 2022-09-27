@@ -46,11 +46,9 @@ jobs:
  
         - run: | 
  
-            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ 
-secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
+            docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
  
-            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME 
-}}:${{ github.run_number }} 
+            docker push ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
  
         - name: 'Deploy to Azure Container Instances' 
  
@@ -62,8 +60,7 @@ secrets.REPOSITORY_NAME }}:${{ github.run_number }}
  
             dns-name-label: ${{ secrets.RESOURCE_GROUP }} 
  
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ 
-github.run_number }} 
+            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
  
             registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} 
  
@@ -93,8 +90,7 @@ Hier kun je de url vinden.
  
             dns-name-label: ${{ secrets.RESOURCE_GROUP }} 
  
-            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ 
-github.run_number }} 
+            image: ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ secrets.REPOSITORY_NAME }}:${{ github.run_number }} 
  
             registry-login-server: ${{ secrets.REGISTRY_LOGIN_SERVER }} 
  
